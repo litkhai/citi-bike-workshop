@@ -143,7 +143,7 @@ being academic, and the un-indexed variants of the window query start sorting
 on disk where the covered one does not.
 
 **Compare against the trip-based version.** The
-[PostGIS + Seoul bike lab](https://github.com/litkhai/clickhouse-hols/tree/main/managed-postgres/postgis-fdw-bike)
+[PostGIS + Seoul bike lab](https://github.com/litkhai/clickhouse-managed-postgres-hols/tree/main/managed-postgres/postgis-fdw-bike)
 does the same split with real trip events instead of derived snapshots.
 
 ## Feedback
