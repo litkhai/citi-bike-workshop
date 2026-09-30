@@ -5,9 +5,9 @@ site_description: >-
   A self-service workshop on a live public data feed: keep the geography in
   Managed Postgres, push the counting down to ClickHouse Cloud, and prove from
   the execution plan which engine answered.
-site_url: https://litkhai.github.io/lightweight-workshop-ny-citi-bike/
-repo_url: https://github.com/litkhai/lightweight-workshop-ny-citi-bike
-repo_name: litkhai/lightweight-workshop-ny-citi-bike
+site_url: https://litkhai.github.io/citi-bike-workshop/
+repo_url: https://github.com/litkhai/citi-bike-workshop
+repo_name: litkhai/citi-bike-workshop
 edit_uri: edit/main/workshop/
 
 docs_dir: workshop
@@ -102,7 +102,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/litkhai/lightweight-workshop-ny-citi-bike
+      link: https://github.com/litkhai/citi-bike-workshop
       name: Workshop repository on GitHub
 
 copyright: >-
