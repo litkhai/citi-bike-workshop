@@ -1,6 +1,6 @@
 # NY Citi Bike — PostGIS meets ClickHouse
 
-**[Documentation site](https://litkhai.github.io/lightweight-workshop-ny-citi-bike/) · [Workshop overview](workshop/workshop-overview.md) · [Start here](workshop/00-prerequisites.md) · [Instructor guide](workshop/instructor-guide.md)**
+**[Documentation site](https://litkhai.github.io/citi-bike-workshop/) · [Workshop overview](workshop/workshop-overview.md) · [Start here](workshop/00-prerequisites.md) · [Instructor guide](workshop/instructor-guide.md)**
 
 A self-service workshop built on a data feed that is **actually live**. New
 York's Citi Bike publishes the state of every dock as public JSON with no API
@@ -82,8 +82,8 @@ machine.
 ## Quick start
 
 ```bash
-git clone https://github.com/litkhai/lightweight-workshop-ny-citi-bike.git
-cd lightweight-workshop-ny-citi-bike
+git clone https://github.com/litkhai/citi-bike-workshop.git
+cd citi-bike-workshop
 
 ./scripts/preflight.sh          # checks Docker and the live feed — no account needed yet
 ```
@@ -246,7 +246,7 @@ the sequence of screens, which is exactly the part that drifts. Both modules
 describe what you are looking for alongside the current labels.
 
 If a step does not match what you see, that is worth an
-[issue](https://github.com/litkhai/lightweight-workshop-ny-citi-bike/issues).
+[issue](https://github.com/litkhai/citi-bike-workshop/issues).
 
 ## License
 

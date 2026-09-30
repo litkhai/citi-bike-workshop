@@ -149,4 +149,4 @@ does the same split with real trip events instead of derived snapshots.
 ## Feedback
 
 Issues and pull requests welcome at
-[litkhai/lightweight-workshop-ny-citi-bike](https://github.com/litkhai/lightweight-workshop-ny-citi-bike).
+[litkhai/citi-bike-workshop](https://github.com/litkhai/citi-bike-workshop).

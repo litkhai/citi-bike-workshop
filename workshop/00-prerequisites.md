@@ -21,8 +21,8 @@ equipped.
 ## Get the repository
 
 ```bash
-git clone https://github.com/litkhai/lightweight-workshop-ny-citi-bike.git
-cd lightweight-workshop-ny-citi-bike
+git clone https://github.com/litkhai/citi-bike-workshop.git
+cd citi-bike-workshop
 ```
 
 ## Check the feed before anything else
