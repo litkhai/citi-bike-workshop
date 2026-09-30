@@ -167,6 +167,36 @@ with instructions when they are missing; `scripts/psql.sh` masks the hostname
 on the way out, because the hostname carries your service name and people
 screenshot terminals during workshops.
 
+## Troubleshooting
+
+Run `./scripts/preflight.sh` first — it checks Docker, the feed and your Managed Postgres
+extensions without creating anything. The failures below are the ones seen in sessions; the
+[instructor guide](workshop/instructor-guide.md) has the background.
+
+**The ClickPipe will not connect (module 05).** The pipe connects from ClickHouse Cloud's network,
+not from your laptop, so the IP you allow-listed in [01](workshop/01-provision.md) does nothing for
+it — the Postgres service has to accept that connection too. The pipe also rejects the source unless
+`wal_level` is `logical`, publication `ny_citibike_pub` has 2 tables, and both tables have replica
+identity `default`; [05](workshop/05-clickpipes.md) has the three queries.
+
+**Nothing arrives after module 03.** Expect up to two minutes: up to one for the refreshable
+materialized view, up to another for `pg_cron`. Wait three minutes before running `02-verify.sql`
+again or debugging anything.
+
+**Module 06 only ever reports `dragged`.** The small station table was not replicated, only the big
+one. Mixing one local table into the join silently collapses the pushdown — no error, no warning.
+Replicate both tables ([05](workshop/05-clickpipes.md), [06](workshop/06-pushdown.md)).
+
+**The feed is down.** Point the two `url()` calls in `clickhouse/01-ingest-rmv.sql` at another GBFS
+feed (Capital Bikeshare works); nothing else changes. See [Using a different city](#using-a-different-city).
+
+**A cancelled backfill still holds locks (module 09).** Cancelling `psql` does not cancel the
+backend. Find it with `SELECT pid, state, query FROM pg_stat_activity WHERE query LIKE '%sim_%';`
+and stop it with `SELECT pg_terminate_backend(<pid>);` ([09](workshop/09-trips.md)).
+
+**Costs keep running after the session.** Both schedulers are server-side; closing your laptop does
+not stop collection. Tear down with [08 — Wrap-up](workshop/08-wrap-up.md).
+
 ## Verification status
 
 Every claim here was run. This section says on what.
