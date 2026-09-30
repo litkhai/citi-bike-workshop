@@ -1,6 +1,7 @@
 # AGENTS.md
 
 > Harness: khai-harness core@4b0e565 · context public · bilingual yes
+> Reads: ../khai-harness/standards/delivery/profiles/workshop
 
 Instructions for coding agents working in this repository.
 
